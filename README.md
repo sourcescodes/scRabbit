@@ -2,7 +2,7 @@
 
 ***
 
-Single-cell technologies have revealed a wide diversity of cell types and uncovered new associations between cell states and factors such as sex, disease, and development. Integrating data from various single-cell sequencing technologies provides deeper insights than analyzing individual assays alone. However, existing integration methods often emphasize the degree of mixing between different modalities, leading to over-correction that can obscure distinctions among cell subtypes and biological conditions. To address these limitations, we introduce scRabbit, an unsupervised transfer learning-based framework for integrating paired and unpaired multi-omics data at the single-cell level.
+Integrating data from various single-cell sequencing technologies provides deeper insights than analyzing individual assays alone. Although several methods have been developed to integrate single-cell multiomics data, they often focus heavily on the degree of mixing between different modalities, resulting in over-integration that can obscure distinctions among cell subtypes and biological conditions. To address this limitation, we introduce scRabbit, an unsupervised transfer learning-based framework for disentangling the over-integration of single-cell and spatial multiomics data. scRabbit maintains the integrity of distinct data sources by using domain-specific batch normalization to reconstruct original expression profiles while preserving unique modality-specific features, thereby reducing over-integration. Additionally, scRabbit utilizes a modality classifier to capture shared features across modalities, enhancing integration and improving model training efficiency. Comprehensive benchmarking analyses demonstrate that scRabbit outperforms current state-of-the-art methods across various complex scenarios, including paired and unpaired datasets, cell type imbalances, and different biological conditions. Furthermore, we evaluate the effectiveness of scRabbit in integrating single-cell RNA data with spatial omics data, such as MERFISH and seqFISH.
 
 ***
 
@@ -12,7 +12,7 @@ Single-cell technologies have revealed a wide diversity of cell types and uncove
 
 ***
 
-To install scRabbit, make sure you  have PyTorch and scanpy installed. If you need more details on the dependences, look at the requirements.txt file. Set up environment for scRabbit:
+To install scRabbit, please make sure you have PyTorch and scanpy installed. If you need more details on the dependencies, look at the requirements.txt file. Set up the environment for scRabbit:
 
 ```python
 pip install -r requirements.txt
